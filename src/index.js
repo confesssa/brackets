@@ -1,10 +1,9 @@
 module.exports = function check(str, bracketsConfig) {
-    let newString = str;
 
+    let newString = str;
     let brackets = bracketsConfig.flat();
 
 
-function es(newString,brackets) {
 for (let i = 0; i <newString.length; i++) {
   for (let j = 0; j < brackets.length; j++) {
   if (brackets[j] === newString[i] && brackets[j+1] === newString[i + 1]) {
@@ -15,12 +14,12 @@ for (let i = 0; i <newString.length; i++) {
 if (newString.length === 0) {
     return true;
     };
-    if (str === newString) {
+if (str === newString) {
     return false;
-    } else {
-     es();
+} else {
+     return check(newString, bracketsConfig);
     };
-};
+
 
 
   }
